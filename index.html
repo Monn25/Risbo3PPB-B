@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejaring Pendidikan Pertanian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            cursor: url('pngegg.png'), auto;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1b1b1b;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header, section {
+            padding: 50px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        header {
+            background: url('DALL·E 2025-02-11 00.18.28 - A realistic agricultural field scene showing farmers working manually in the fields without any tractors. The image features lush green crops, farmers.webp') no-repeat center center/cover;
+        }
+
+        header::before, .about::before, .blog::before, .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1, header p, header .logos, .about h2, .about p, .blog h2, .blog p, .contact h2, .contact p, .contact a {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin: 0;
+            color: #76c893;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #76c893;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .about {
+            background: url('WhatsApp Image 2024-12-30 at 16.51.19_c8cd3306.jpg') no-repeat center center/cover;
+        }
+
+        .blog {
+            background: url('WhatsApp Image 2025-01-15 at 17.17.15_0ca5b2af.jpg') no-repeat center center/cover;
+        }
+
+        .contact {
+            background: url('Ganata.jpg') no-repeat center center/cover;
+        }
+
+        img {
+            max-width: 30%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .logos img {
+            width: 60px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logos img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #141414;
+            padding: 20px;
+            text-align: center;
+            color: #76c893;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            color: #76c893;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .search-container {
+            margin: 20px auto;
+            max-width: 400px;
+            position: relative;
+            width: 90%;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+        }
+
+        .search-container button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #76c893;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section, header {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        section.active, header.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            img {
+                max-width: 50%;
+            }
+
+            .logos img {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <h1>Selamat Datang di Jejaring Pendidikan Pertanian</h1>
+        <p>Membangun masa depan pertanian dengan teknologi modern.</p>
+        <div class="logos">
+            <img src="Logo_Kementerian_Pertanian_Republik_Indonesia.svg" alt="Logo Kementerian Pertanian">
+            <img src="Polbangtan_Yoma_Logo.png" alt="Logo Polbangtan Yoma">
+            <img src="Ganata.jpg" alt="Logo Ganata Lokatara">
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" placeholder="Cari informasi pertanian...">
+        <button>&#128269;</button>
+    </div>
+
+    <section class="about">
+        <h2>Tentang Kami</h2>
+        <img src="WhatsApp Image 2024-12-30 at 16.51.19_c8cd3306.jpg" alt="Foto Para Petani">
+        <p>Di era modern ini, teknologi memainkan peran penting dalam meningkatkan efisiensi dan produktivitas pertanian. Website ini dibuat untuk memfasilitasi penyebaran informasi dan inovasi di bidang pertanian, serta mendukung para petani dalam menghadapi tantangan global.</p>
+    </section>
+
+    <section class="blog">
+        <h2>Informasi Teknologi Terkini</h2>
+        <img src="WhatsApp Image 2025-01-15 at 17.17.15_0ca5b2af.jpg" alt="Burung Hantu di Sawah">
+        <p>Mahasiswa POLBANGTAN YOMA jurusan pertanian melaksanakan praktek pembuatan rumah burung hantu pada mata kuliah Perlindungan Tanaman Ramah Lingkungan. Teknologi penggunaan burung hantu dinilai sangat efisien untuk membasmi hama tikus di lahan. Burung hantu, sebagai predator alami, mampu mengurangi populasi tikus tanpa merusak lingkungan. Setiap burung hantu dapat memangsa hingga 5-10 tikus per malam, menjadikannya solusi yang efektif dan berkelanjutan dalam pengendalian hama di pertanian.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami melalui Instagram: <a href="https://instagram.com/Ganata.Lokatara_" target="_blank">Ganata.Lokatara_</a></p>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2025 Jejaring Pendidikan Pertanian. Semua hak dilindungi.</p>
+        <p><strong>Author Website:</strong> Farhan Akmal Muzakki, Nala Akhsanal Muna, Sendy Afriyanur, dan Gana Mandrakanata Lokatara.</p>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('section, header');
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    window.scrollTo({ top: entry.target.offsetTop, behavior: 'smooth' });
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
